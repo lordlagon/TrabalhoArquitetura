@@ -1,3 +1,4 @@
+package xz;
 
 public interface IObservadorPostagens  {
 	
