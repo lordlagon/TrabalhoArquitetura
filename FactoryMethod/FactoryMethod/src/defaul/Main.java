@@ -1,3 +1,4 @@
+//Alunos: André Xavier e Alexandre de Faria
 package defaul;
 
 import java.util.Scanner;

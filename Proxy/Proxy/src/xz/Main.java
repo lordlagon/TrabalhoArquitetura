@@ -1,5 +1,6 @@
 package xz;
 
+//Alunos: André Xavier e Alexandre de Faria
 public class Main {
 
 	public static void main(String[] args) {
