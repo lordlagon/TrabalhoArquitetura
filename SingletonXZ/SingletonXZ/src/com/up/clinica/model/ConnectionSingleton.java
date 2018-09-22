@@ -2,7 +2,7 @@ package com.up.clinica.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
+
 
 public class ConnectionSingleton {
 
