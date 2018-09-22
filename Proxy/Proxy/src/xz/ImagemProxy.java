@@ -1,41 +1,52 @@
+package xz;
 
-public class Imagem implements Grafico{
-	
+public class ImagemProxy implements Grafico{
+
 	private int altura;
 	private int largura;
 	private String caminho;
-	//private Byte binarioImagem;
+	private Imagem imagem;
 	
-	public Imagem(String caminho) {
-		System.out.println("Construindo uma imagem Real ");
+	public ImagemProxy(String caminho) {
+		System.out.println("Construindo um proxy para imagem");
 		this.caminho = caminho;
 		//inicializar altura e largura
 		altura = 0;
 		largura = 0;
-		//carregar binario
-				
 	}
 	
 	
 	@Override
 	public int getAltura() {
-		return altura;
+		if (imagem == null)
+			return altura;
+		else
+			return imagem.getAltura();
 	}
-	
+
 	@Override
 	public int getLargura() {
-		return largura;
+		if (imagem == null)
+			return largura;
+		else
+			return imagem.getLargura();
 	}
+
 	@Override
 	public String getCaminho() {
-		return caminho;
+		if (imagem == null)
+			return caminho;
+		else
+			return imagem.getCaminho();
 	}
-	
+
 	
 	
 	@Override
 	public void desenharImagem() {
-		System.out.println("Desenhando imagem");
+		if(imagem == null)
+			imagem = new Imagem(caminho);
+		imagem.desenharImagem();
 	}
 	
 	
@@ -49,5 +60,4 @@ public class Imagem implements Grafico{
 	public void setCaminho(String caminho) {
 		this.caminho = caminho;
 	}
-
 }
