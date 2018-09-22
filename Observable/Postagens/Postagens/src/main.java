@@ -1,3 +1,4 @@
+//Alunos: André Xavier e Alexandre de Faria
 import java.util.Date;
 
 public class main {

@@ -1,3 +1,5 @@
+//Alunos: André Xavier e Alexandre de Faria
+
 package Programa;
 import java.util.Scanner;
 

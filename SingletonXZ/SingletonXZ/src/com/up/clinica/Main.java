@@ -1,3 +1,4 @@
+//Alunos: André Xavier e Alexandre de Faria
 package com.up.clinica;
 
 import java.sql.Connection;
