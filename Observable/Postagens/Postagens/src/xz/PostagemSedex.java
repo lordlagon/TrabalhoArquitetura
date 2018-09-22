@@ -1,3 +1,4 @@
+package xz;
 
 public class PostagemSedex extends PostagemCorreiosObservavel {
 
