@@ -1,3 +1,5 @@
+package xz;
+
 
 public interface Grafico {
 	

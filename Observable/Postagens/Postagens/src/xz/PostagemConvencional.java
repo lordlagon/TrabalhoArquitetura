@@ -1,3 +1,4 @@
+package xz;
 
 public class PostagemConvencional extends PostagemCorreiosObservavel {
 	

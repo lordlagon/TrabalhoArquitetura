@@ -19,7 +19,7 @@ public Forma construir(EnumTipo tipo) throws Exception {
 		
 		
 	default:
-		throw new Exception("Essa forma não existe,digite novamente");
+		throw new Exception("A forma não seguiu os padrões");
 	}
 	
 	
