@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-import com.up.clinica.model.ConnectionFactory;
+import com.up.clinica.model.ConnectionSingleton;
 import com.up.clinica.model.TipoAnimal;
 
 public class TipoAnimalDAO implements IGenericDAO<TipoAnimal, String>{
@@ -41,7 +41,7 @@ public class TipoAnimalDAO implements IGenericDAO<TipoAnimal, String>{
 		Exception ultimaExcecao = null;
 
 		try {
-			con = ConnectionFactory.getInstance();
+			con = ConnectionSingleton.getInstance();
 			con.setAutoCommit(false);
 			
 			statementAnimal = con.prepareStatement("DELETE FROM ANIMAL WHERE especie_id IN "

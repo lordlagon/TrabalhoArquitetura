@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import com.up.clinica.model.ConnectionFactory;
+import com.up.clinica.model.ConnectionSingleton;
 
 public class Main {
 	public static void main(String[] args) {
-		Connection conn = ConnectionFactory.getInstance();
+		Connection conn = ConnectionSingleton.getInstance();
         try {
             Statement statement = conn.createStatement();
             ResultSet resultset = statement.executeQuery("select * from animal");

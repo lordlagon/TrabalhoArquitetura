@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.up.clinica.model.ConnectionFactory;
+import com.up.clinica.model.ConnectionSingleton;
 import com.up.clinica.model.Especie;
 
 public class EspecieDAO extends AbstractDAO<Especie, Long>{
@@ -16,7 +16,7 @@ public class EspecieDAO extends AbstractDAO<Especie, Long>{
 		Exception ultimaExcecao = null;
 
 		try {
-			con = ConnectionFactory.getInstance();
+			con = ConnectionSingleton.getInstance();
 			con.setAutoCommit(false);
 			
 			statementAnimal = con.prepareStatement("DELETE FROM "

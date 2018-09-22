@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.up.clinica.model.ConnectionFactory;
+import com.up.clinica.model.ConnectionSingleton;
 
 public abstract class AbstractDAO<T,U> implements IGenericDAO<T, U>{
 	
@@ -19,7 +19,7 @@ public abstract class AbstractDAO<T,U> implements IGenericDAO<T, U>{
 		Exception ultimaExcecao = null;
 
 		try {
-			con = ConnectionFactory.getInstance();
+			con = ConnectionSingleton.getInstance();
 			statement = this.criarStatementListar(con);
 			rs = statement.executeQuery();
 			
@@ -61,7 +61,7 @@ public abstract class AbstractDAO<T,U> implements IGenericDAO<T, U>{
 		Exception ultimaExcecao = null;
 
 		try {
-			con = ConnectionFactory.getInstance();
+			con = ConnectionSingleton.getInstance();
 			statement = this.criarStatementPersistir(con, objeto);
 			statement.executeUpdate();
 
@@ -103,7 +103,7 @@ public abstract class AbstractDAO<T,U> implements IGenericDAO<T, U>{
 		Exception ultimaExcecao = null;
 
 		try {
-			con = ConnectionFactory.getInstance();
+			con = ConnectionSingleton.getInstance();
 			statement = this.criarStatementBuscar(con, id);
 			rs = statement.executeQuery();
 			
@@ -143,7 +143,7 @@ public abstract class AbstractDAO<T,U> implements IGenericDAO<T, U>{
 			Exception ultimaExcecao = null;
 
 			try {
-				con = ConnectionFactory.getInstance();
+				con = ConnectionSingleton.getInstance();
 				statement = this.criarStatementAtualizar(con, objeto);
 				statement.executeUpdate();
 				return;
@@ -179,7 +179,7 @@ public abstract class AbstractDAO<T,U> implements IGenericDAO<T, U>{
 		Exception ultimaExcecao = null;
 
 		try {
-			con = ConnectionFactory.getInstance();
+			con = ConnectionSingleton.getInstance();
 			statement = this.criarStatementRemover(con, id);
 			statement.executeUpdate();
 			return;

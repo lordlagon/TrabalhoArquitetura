@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConnectionFactory{
+public class ConnectionSingleton{
 
-	 public static Connection conexao = null;
+	 public static Connection conexaoXZ = null;
 	   
-	    private ConnectionFactory()
+	    private ConnectionSingleton()
 	    {
 	       
 	    }
@@ -16,15 +16,15 @@ public class ConnectionFactory{
 	    public static Connection getInstance()
 	    {
 	        try {
-	            if(conexao == null)
+	            if(conexaoXZ == null)
 	            {
 	                Class.forName("org.hsqldb.jdbc.JDBCDriver");
-	                conexao = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/clinicaveterinariadb", "SA", "");
+	                conexaoXZ = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/clinicaveterinariadb", "SA", "");
 	            }  
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        }
-	        return conexao;
+	        return conexaoXZ;
 	    }
 
 }
