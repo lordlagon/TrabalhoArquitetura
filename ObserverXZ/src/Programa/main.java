@@ -1,5 +1,5 @@
 <<<<<<< HEAD:Observable/Postagens/Postagens/src/xz/main.java
-package xz;
+package Programa;
 
 =======
 //Alunos: André Xavier e Alexandre de Faria

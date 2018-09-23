@@ -1,4 +1,4 @@
-package xz;
+package Programa;
 
 public interface IObservervadorPostagem  {
 	
