@@ -1,9 +1,11 @@
 package padrao;
 
 public enum EnumTipo {
-Quad,
-Retan,
-Trian;
+QuadradoCalc,
+
+RetanguloCalc,
+
+TrianguloCalc;
 	
 
 }
