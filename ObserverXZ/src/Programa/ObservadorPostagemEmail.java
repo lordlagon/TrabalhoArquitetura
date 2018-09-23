@@ -1,10 +1,9 @@
 package Programa;
-
 import java.util.Date;
 import java.util.Set;
 
 
-public class ObservadorPostagemEmail implements IObservervadorPostagem  {
+public class ObservadorPostagemEmail implements IObservadorPostagens  {
 
 	
 	private String enderecoEnvioEmail;
@@ -15,7 +14,7 @@ public class ObservadorPostagemEmail implements IObservervadorPostagem  {
 	private boolean ultimoEstadoEntrega;
 	private boolean itemEntregue;
 	private PostagemCorreiosObservavel postagemObservada;
-	private Set<IObservervadorPostagem> caminho;
+	private Set<IObservadorPostagens> caminho;
 	private String caminhoatualizado;
 	
 	

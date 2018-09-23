@@ -1,9 +1,4 @@
-<<<<<<< HEAD:Observable/Postagens/Postagens/src/xz/main.java
 package Programa;
-
-=======
-//Alunos: André Xavier e Alexandre de Faria
->>>>>>> Andre:Observable/Postagens/Postagens/src/main.java
 import java.util.Date;
 
 public class main {
