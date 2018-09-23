@@ -1,4 +1,4 @@
-package defaul;
+package padrao;
 
 public enum EnumTipo {
 Quad,

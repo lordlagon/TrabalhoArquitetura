@@ -1,4 +1,4 @@
-package defaul;
+package padrao;
 
 public class Retan implements Forma {
 	public double area;

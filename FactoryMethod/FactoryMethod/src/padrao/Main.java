@@ -1,4 +1,4 @@
-package defaul;
+package padrao;
 
 import java.util.Scanner;
 
