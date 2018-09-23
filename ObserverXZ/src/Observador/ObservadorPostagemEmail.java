@@ -1,69 +1,63 @@
-package Programa;
+package Observador;
+
 import java.util.Date;
 import java.util.Set;
 
+import Postagem.PostagemCorreiosObservavel;
 
-public class ObservadorPostagemEmail implements IObservadorPostagens  {
+public class ObservadorPostagemEmail implements IObservadorPostagens {
 
-	
+	private PostagemCorreiosObservavel postagemObservada;
 	private String enderecoEnvioEmail;
-	
+
 	private Date ultimaHoraPostagemConhecida;
 	private String ultimaOrigemConhecida;
 	private String ultimoDestinoConhecido;
 	private boolean ultimoEstadoEntrega;
 	private boolean itemEntregue;
-	private PostagemCorreiosObservavel postagemObservada;
-	private Set<IObservadorPostagens> caminho;
-	private String caminhoatualizado;
-	
-	
-	public ObservadorPostagemEmail(String enderecoEnvioEmail ) 
-	{
-		this.enderecoEnvioEmail =enderecoEnvioEmail;
+	private Set<IObservadorPostagens> caminhos;
+	private String Caminho;
+
+	public ObservadorPostagemEmail(String enderecoEnvioEmail) {
+		this.enderecoEnvioEmail = enderecoEnvioEmail;
+
 	}
-	
+
 	private void atualizardados() {
-		
+
 		this.ultimaHoraPostagemConhecida = postagemObservada.getDataHoraPostagem();
 		this.ultimaOrigemConhecida = postagemObservada.getOrigem();
 		this.ultimoDestinoConhecido = postagemObservada.getDestino();
-		
+
 		ultimoEstadoEntrega = postagemObservada.isItemEntregue();
 	}
-	
-	
-	
+
 	public void atualizar() {
-		System.out.println("Enviando um email para " + enderecoEnvioEmail
-				+ " com os seguintes conteúdos");
-				if(ultimaHoraPostagemConhecida!=postagemObservada.getDataHoraPostagem()) {
-				System.out.println("Por algum motivo a data e hora da postagem mudou para "
-				+ postagemObservada.getDataHoraPostagem());
-				}
-				if(!ultimaOrigemConhecida.equals(postagemObservada.getOrigem())) {
-				System.out.println("Por algum motivo a origem mudou para "
-				+ postagemObservada.getOrigem());
-				}
-				if(!ultimoDestinoConhecido.equals(postagemObservada.getDestino())) {
-				System.out.println("Por algum motivo o destino mudou para "
-				+ postagemObservada.getDestino());
-				}
-		
-				if(ultimoEstadoEntrega!=postagemObservada.isItemEntregue()) {
-				if(postagemObservada.isItemEntregue() == true)
+		System.out.println("Enviando um email para " + enderecoEnvioEmail + " com os seguintes conteúdos");
+		if (ultimaHoraPostagemConhecida != postagemObservada.getDataHoraPostagem()) {
+			System.out.println(
+					"Por algum motivo a data e hora da postagem mudou para " + postagemObservada.getDataHoraPostagem());
+		}
+		if (!ultimaOrigemConhecida.equals(postagemObservada.getOrigem())) {
+			System.out.println("Por algum motivo a origem mudou para " + postagemObservada.getOrigem());
+		}
+		if (!ultimoDestinoConhecido.equals(postagemObservada.getDestino())) {
+			System.out.println("Por algum motivo o destino mudou para " + postagemObservada.getDestino());
+		}
+
+		if (ultimoEstadoEntrega != postagemObservada.isItemEntregue()) {
+			if (postagemObservada.isItemEntregue() == true)
 				System.out.println("Sua encomenda foi entregue!");
-				}
-				this.atualizardados();
+		}
+		this.atualizardados();
 	}
 
-	public void setPostagemObservada(
-			PostagemCorreiosObservavel postagemObservada) {
+	public void setPostagemObservada(PostagemCorreiosObservavel postagemObservada) {
 		this.postagemObservada = postagemObservada;
 		this.atualizardados();
-		
+
 	}
-	
+
 	public String getEnderecoEnvioEmail() {
 		return enderecoEnvioEmail;
 	}
@@ -116,5 +110,21 @@ public class ObservadorPostagemEmail implements IObservadorPostagens  {
 		return postagemObservada;
 	}
 
+	
+	public Set<IObservadorPostagens> getCaminhos() {
+		return caminhos;
+	}
+
+	public void setCaminhos(Set<IObservadorPostagens> caminhos) {
+		this.caminhos = caminhos;
+	}
+
+	public String getCaminho() {
+		return Caminho;
+	}
+
+	public void setCaminho(String caminho) {
+		Caminho = caminho;
+	}
 
 }

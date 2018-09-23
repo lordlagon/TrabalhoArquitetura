@@ -1,10 +1,10 @@
-package Programa;
+package Postagem;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
+
+import Observador.IObservadorPostagens;
 
 public abstract class PostagemCorreiosObservavel {
 	private Date dataHoraPostagem;
@@ -32,22 +32,7 @@ public abstract class PostagemCorreiosObservavel {
 		observadores.add(observador);
 		observador.setPostagemObservada(this);
 	}
-	public void adicionarCaminho(String Caminho) {
-		caminhos.add(Caminho);
-		this.notificar();
-	}
-	
-
-	public String getCaminho() {
-		return Caminho;
-	}
-
-	public void setCaminho() {
-		this.Caminho= Caminho;
-		this.notificar();
 		
-	}
-	
 	public void removerObservador(IObservadorPostagens observador) {
 		observadores.remove(observador);
 	}
@@ -56,6 +41,19 @@ public abstract class PostagemCorreiosObservavel {
 		for (IObservadorPostagens o : observadores) {
 			o.atualizar();
 		}
+	}
+	public void adicionarCaminho(String Caminho) {
+		caminhos.add(Caminho);
+		this.notificar();
+	}
+	
+	public String getCaminho() {
+		return Caminho;
+	}
+
+	public void setCaminho(String caminho) {
+		this.Caminho = caminho;
+		this.notificar();
 	}
 
 	public Date getDataHoraPostagem() {

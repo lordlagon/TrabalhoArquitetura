@@ -1,4 +1,4 @@
-package Programa;
+package Postagem;
 
 public class PostagemSedex extends PostagemCorreiosObservavel {
 
@@ -12,7 +12,7 @@ public class PostagemSedex extends PostagemCorreiosObservavel {
 	}
 	public void setEmbalagemFragil(boolean embalagemFragil) {
 	this.embalagemFragil = embalagemFragil;
-	//não precisamos notificar os observadores dessa mudança no nosso exemplo
+	
 	}
 	
 	
