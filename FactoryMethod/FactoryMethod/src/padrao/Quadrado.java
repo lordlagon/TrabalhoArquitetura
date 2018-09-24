@@ -1,6 +1,7 @@
 package padrao;
 
-public class Retan implements Forma {
+public class Quadrado implements Forma {
+
 	public double area;
 
 	public double getArea() {
@@ -10,11 +11,14 @@ public class Retan implements Forma {
 	public void setArea(double area) {
 		this.area = area;
 	}
-	@Override
+	
+@Override
 	public double calcular(double altura, double largura) {
 		area = altura * largura;
 		return area;
 		
 	}
+
+
 
 }

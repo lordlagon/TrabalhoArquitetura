@@ -1,6 +1,6 @@
 package padrao;
 
-public class Trian implements Forma {
+public class Triangulo implements Forma {
 
 	public double area;
 

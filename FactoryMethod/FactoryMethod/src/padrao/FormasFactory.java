@@ -9,13 +9,13 @@ public class FormasFactory implements AbstractFactory {
 public Forma construir(EnumTipo tipo) throws Exception {
 	switch(tipo)
 	{
-	case Retan:
-		return new Retan();
-	case Quad:
-		return new Quad();
+	case Retangulo:
+		return new Retangulo();
+	case Quadrado:
+		return new Quadrado();
 		
-	case Trian:
-		return new Trian();
+	case Triangulo:
+		return new Triangulo();
 		
 		
 	default:

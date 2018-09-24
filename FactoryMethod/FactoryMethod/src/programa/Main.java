@@ -1,10 +1,18 @@
-package padrao;
+package programa;
 
 import java.util.Scanner;
+
+import padrao.EnumTipo;
+import padrao.Forma;
+import padrao.FormasFactory;
+import padrao.Quadrado;
+import padrao.Retangulo;
+import padrao.Triangulo;
 
 public class Main {
 	
 	public static void main(String[] args) throws Exception {
+		
 		double altura= 0;
 		double largura = 0;
 
@@ -18,8 +26,8 @@ public class Main {
 		
 		switch (tipo) {
 		case 1:
-			Trian t = new Trian();
-			Forma trian = factory.construir(EnumTipo.Trian);
+			Triangulo t = new Triangulo();
+			Forma trian = factory.construir(EnumTipo.Triangulo);
 			
 			System.out.println("Digite altura");
 			altura = entrada.nextDouble();
@@ -33,8 +41,8 @@ public class Main {
 			System.out.print("A area do triangulo é :" + t.calcular(altura, largura));
 			break;
 		case 2:
-			Quad q = new Quad();
-			Forma quad = factory.construir(EnumTipo.Quad);
+			Quadrado q = new Quadrado();
+			Forma quad = factory.construir(EnumTipo.Quadrado);
 			
 			System.out.println("Digite altura");
 			altura = entrada.nextDouble();
@@ -48,8 +56,8 @@ public class Main {
 			System.out.print("A area do triangulo é :" + q.calcular(altura, largura));
 			break;
 		case 3:
-			Retan r = new Retan();
-			Forma retan = factory.construir(EnumTipo.Retan);
+			Retangulo r = new Retangulo();
+			Forma retan = factory.construir(EnumTipo.Retangulo);
 			
 			System.out.println("Digite altura");
 			altura = entrada.nextDouble();
@@ -65,11 +73,6 @@ public class Main {
 			break;
 		}
 		
-		
-		
-		
-		
-
 	}
 
 }
