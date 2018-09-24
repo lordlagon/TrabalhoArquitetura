@@ -5,19 +5,15 @@ public class Imagem implements Grafico{
 	private int altura;
 	private int largura;
 	private String caminho;
-	//private Byte binarioImagem;
-	
+		
 	public Imagem(String caminho) {
 		System.out.println("Construindo uma imagem Real ");
 		this.caminho = caminho;
-		//inicializar altura e largura
 		altura = 0;
 		largura = 0;
-		//carregar binario
-				
+					
 	}
-	
-	
+		
 	@Override
 	public int getAltura() {
 		return altura;
@@ -31,8 +27,6 @@ public class Imagem implements Grafico{
 	public String getCaminho() {
 		return caminho;
 	}
-	
-	
 	
 	@Override
 	public void desenharImagem() {
