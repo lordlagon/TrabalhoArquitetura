@@ -1,4 +1,7 @@
-package xz;
+package programa;
+
+import xz.Grafico;
+import xz.ImagemProxy;
 
 //Alunos: André Xavier e Alexandre de Faria
 public class Main {
