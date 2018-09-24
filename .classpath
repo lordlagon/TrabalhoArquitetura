@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ChainOfResponsibilityXZ/src"/>
+	<classpathentry kind="src" path="FactoryMethod/FactoryMethod/src"/>
+	<classpathentry kind="src" path="FactoryMethodXZ/src"/>
+	<classpathentry kind="src" path="ObserverXZ/src"/>
+	<classpathentry kind="src" path="ProxyXZ/src"/>
+	<classpathentry kind="src" path="SingletonXZ/src"/>
+	<classpathentry kind="output" path="ChainOfResponsibilityXZ/bin"/>
+</classpath>
