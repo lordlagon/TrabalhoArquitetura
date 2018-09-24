@@ -1,6 +1,6 @@
 package padrao;
 
-import defaul.EnumTipo;
+
 
 public interface AbstractFactory {
 	
